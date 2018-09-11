@@ -1,0 +1,4 @@
+9/5/18
+turn off Chrome notifications pushing to Windows Notification Center:
+- in Chome browser go to chrome://flags, search "notifications", set "Enable native notifications" to Disable
+- from https://www.theverge.com/2018/8/8/17665398/google-chrome-windows-10-notifications-action-center-support
