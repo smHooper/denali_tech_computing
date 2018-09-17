@@ -59,7 +59,7 @@ File types that are readable across platforms
 This was originally a database file for versions of Access before 2007. It's also the file extension ESRI uses for [personal geodatabases](http://desktop.arcgis.com/en/arcmap/latest/manage-data/administer-file-gdbs/personal-geodatabases.htm), so .mdb files are theoretically directly reabable in ArcGIS applications.
 
 #### .accdb
-Access 2007 introduced this file type, and it has since been the default Access file format. It is not directly reabable in ArcGIS applications, but you can establish an OLE (Object Linking and Embedding) connection.
+Access 2007 introduced this file type, and it has since been the default Access file format. It is not directly reabable in ArcGIS applications, but you can establish an OLE (Object Linking and Embedding) connection to read an .accdb in ArcMap.
 
 #### .dbf
 The .dbf is a legacy file format used for storing tabular data. The table of a shapefile is stored in a .dbf and it can be read by both Access (via import) and Excel. 
