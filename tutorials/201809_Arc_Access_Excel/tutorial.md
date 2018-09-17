@@ -88,14 +88,14 @@ ArcMap and Access enforce different restrictions on field (column) names. In Arc
 - contain only letters, numbers, and underscores
 - have <= 64 characters
 
-Although Access doesn't place the same restrictions on field names, these are generally safe rules to follow when creating tabular data in software package. Fields in data created in ArcMap to be read in Access just can't be named with any of the [Access reserved words](https://support.microsoft.com/en-us/help/286335/list-of-reserved-words-in-access-2002-and-in-later-versions-of-access).
+Although Access doesn't place the same restrictions on field names, these are generally safe rules to follow when creating tabular data in any software package. The only restrictions on fields in data created in ArcMap to be read in Access is they can't be named with any of the [Access reserved words](https://support.microsoft.com/en-us/help/286335/list-of-reserved-words-in-access-2002-and-in-later-versions-of-access).
 
 <a name="editing_db"/>
 
 ### Editing a database in a non-native application
 Theoretically, these methods for utilizing data across software packages should only be for viewing data, not editing or modifying a database. Because a table from an Access database doesn’t have an ObjectID field created and managed by ArcGIS, the data can’t be selected on the map (although records in the table can be) nor can they be edited without exporting and making a copy of the data. 
 
-Access also can do some unpredictable things to database files like adding system and extra tables without warning. It also can't maintain any of the spatial information in a database creating in ArcGIS applications, which can get lost when editing a database in Access. For these and other reasons, ESRI strongly discourages modifying a personal geodatabase in Access.
+Access also can do some unpredictable things to database files like adding system and extra tables without warning. It also can't maintain any of the spatial information in a database created in ArcGIS applications, which can get lost when editing a database in Access. For these and other reasons, ESRI strongly discourages modifying a personal geodatabase in Access.
 
 <a name="reading_data"/>
 
@@ -124,7 +124,7 @@ Since .accdb files aren't directly readable in ArcMap, you need to establish a c
     - Drag the __Add OLE DB Connection__ tool to any toolbar (underneath the main menu)
 2. Click the __Add OLE DB Connection__ tool you just added to a toolbar. In the dialog that appears:
     - Under the __Provider__ tab, select __Microsoft Office 12.0 Access Database Engine OLE DB Provider__ and cleck __Next >>__
-    - In the __Connection__ tab under item 1, enter the full path to the .accdb file in the *Data Source* text field. *NOTE: A quick method for copying the full path of a file on Windows is to open a Windows Explorer window and hold the Shift key and right-click. This will copy the path with quotation marks around it, so you'll have to delete those once you've pasted it into the Data Source text field.*
+    - In the __Connection__ tab under item 1, enter the full path to the .accdb file in the *Data Source* text field. *NOTE: A quick method for copying the full path of a file on Windows is to open a Windows Explorer window and hold the Shift key and right-click. Then select "Copy as path". This will copy the path with quotation marks around it, so you'll have to delete those once you've pasted it into the Data Source text field.*
     - ![alt text](https://github.com/smHooper/denali_tech_computing/blob/master/tutorials/201809_Arc_Access_Excel/images/data_link_properties__select_db.png "Enter the Data Source")
     - Click __Test Connection__
     - Click __OK__ if the connection was successful
@@ -194,7 +194,7 @@ You can perform SQL-like SELECT queries on any table in ArcMap. To do so:
 1. Open the table
 2. Click on the __Table Options__ button in the top left corner of the table's menu
 3. Select __Select By Attributes...__
-*Note that you are only writing the WHERE clause of the SELECT statement
+*Note that you are only writing the WHERE clause of the SELECT statement*
 
 **_Tutorial: Select specific records using SQL_**
 ```no-highlight
@@ -285,7 +285,7 @@ sesssion.
 </br>
 
 ### Using spatial queries to inform aspatial data
-The [Select Layer By Location tool](http://desktop.arcgis.com/en/arcmap/latest/tools/data-management-toolbox/select-layer-by-location.htm) is similar SQL-like queries, but it uses spatial rather than tabular information to select particular records. You can, therefore, isolate particular records from a database table representing spatial features that share some spatial relationship with features in a spatial layer. After exporting those records as a text file, that spatial query is ready to be used in your aspatial database (via [importing external data](https://support.office.com/en-us/article/import-or-link-to-data-in-a-text-file-d6973101-9547-4315-a8f8-02911b549306)).
+The [Select Layer By Location tool](http://desktop.arcgis.com/en/arcmap/latest/tools/data-management-toolbox/select-layer-by-location.htm) is similar to SQL-like queries, but it uses spatial rather than tabular information to select particular records. You can, therefore, isolate particular records from a database table representing spatial features that share some spatial relationship with features in a spatial layer. After exporting those records as a text file, that spatial query is ready to be used in your aspatial database (via [importing external data](https://support.office.com/en-us/article/import-or-link-to-data-in-a-text-file-d6973101-9547-4315-a8f8-02911b549306)).
 
 **_Tutorial: Select by location tool_**
 ```no-highlight
