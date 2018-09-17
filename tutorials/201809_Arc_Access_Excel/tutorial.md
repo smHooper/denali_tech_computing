@@ -46,7 +46,7 @@ Downloading the sample data
 ----------------------------
 1. Click on [this link](https://github.com/smHooper/denali_tech_computing/blob/master/tutorials/201809_Arc_Access_Excel/201809_arc_access_excel_sample_data.zip) to go to the sample data page
 3. Click the __Download__ button
-4. Unzip the downloaded file and save it to a location where there are no spaces or special characters in the preceding path (e.g., C:\users\my_name\computing_tutorials
+4. Unzip the downloaded file and save it to a location where there are no spaces or special characters in the preceding path (e.g., C:\users\my_name\computing_tutorials)
 
 <a name="file_types"/>
 
